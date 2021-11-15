@@ -17,3 +17,11 @@ services:
       - "9644:9644"
     volumes:
       - /var/lib/redpanda/data
+  dashboard:
+    image: shokme/meilisearch-dashboard
+    ports:
+      - 8000:80
+  meilisearch:
+    image: getmeili/meilisearch:latest
+    ports:
+      - 7700:7700
