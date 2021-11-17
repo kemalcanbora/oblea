@@ -25,3 +25,9 @@ services:
     image: getmeili/meilisearch:latest
     ports:
       - 7700:7700
+networks:
+  default:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.10.1.0/24
